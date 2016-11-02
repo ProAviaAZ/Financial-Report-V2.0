@@ -65,7 +65,7 @@ else
 	
 ?>
 	<tr> 
-		<td align="center"><input class="button alt" type="button" onclick="$('#<?php echo $report->pirepid;?>').toggle()" Value="<?php echo $report->code.''.$report->flightnum ;?>" title="Click To View Detail!"></td>
+		<td align="center"><input type="button" onclick="$('#<?php echo $report->pirepid;?>').toggle()" Value="<?php echo $report->code.''.$report->flightnum ;?>" title="Click To View Detail!"></td>
 		<td align="center"><?php echo $report->flighttime_stamp ;?></td>
 		<td align="center">
 		<?php 
