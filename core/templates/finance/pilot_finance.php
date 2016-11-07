@@ -42,8 +42,9 @@
 $pilotid = Auth::$userinfo->pilotid;
 $reports = PilotFinance::last_reports($pilotid);
 ?>
-<h3>Last 5 Flights</h3>
-<table style="border: solid 1px;">
+<h3>All Flights</h3>
+<div style="border: solid 1px; margin-bottom: 35px; padding: 5px;overflow-y: scroll;overflow-x: hidden;height:250px;">
+<table>
 	<tr style="background: #dddddd; text-transform: uppercase;">
 		<td align="center"><strong>Flight #</strong></td>
 		<td align="center"><strong>Duration</strong></td>
@@ -65,7 +66,7 @@ else
 	
 ?>
 	<tr> 
-		<td align="center"><input type="button" onclick="$('#<?php echo $report->pirepid;?>').toggle()" Value="<?php echo $report->code.''.$report->flightnum ;?>" title="Click To View Detail!"></td>
+		<td align="center"><input class="button alt" type="button" onclick="$('#<?php echo $report->pirepid;?>').toggle()" Value="<?php echo $report->code.''.$report->flightnum ;?>" title="Click To View Detail!"></td>
 		<td align="center"><?php echo $report->flighttime_stamp ;?></td>
 		<td align="center">
 		<?php 
@@ -103,5 +104,6 @@ else
 }
 ?>
 </table>
+</div>
 
 

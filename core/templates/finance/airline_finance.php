@@ -66,7 +66,8 @@
 	?>
 </table>
 <h3>all pilots financial report</h3>
-<table style="border: solid 1px;">
+<div style="border: solid 1px; margin-bottom: 35px; padding: 5px;overflow-y: scroll;overflow-x: hidden;height:250px;">
+<table>
 	<tr style="background: #dddddd; text-transform: uppercase;">
 		<td>Pilot ID</td>
 		<td>Pilot Name</td>
@@ -115,14 +116,8 @@ else
 }
 ?>
 </table>
-<div style="float: right;">
-	<a href="<?php echo url('/finance/nextpage/');?><?php echo $start;?>">Next Pilot Page</a>
-	<br />
 </div>
-<div style="float: left;">
-	<a href="<?php echo url('/finance');?>">First Pilot Page</a>
-	<br />
-</div>
+
 
 
 

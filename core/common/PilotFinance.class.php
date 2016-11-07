@@ -23,7 +23,7 @@ class PilotFinance extends CodonData
 	
 	public static function last_reports($pilotid)
 	{
-		$sql ="SELECT * FROM ".TABLE_PREFIX."pireps WHERE pilotid = '$pilotid' ORDER BY submitdate LIMIT 5";
+		$sql ="SELECT * FROM ".TABLE_PREFIX."pireps WHERE pilotid = '$pilotid' ORDER BY submitdate";
 		return DB::get_results($sql);		
 	}
 	
