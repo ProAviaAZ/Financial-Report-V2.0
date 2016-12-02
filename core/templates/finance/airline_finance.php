@@ -6,13 +6,19 @@
 				<td>type</td>
 		</tr>
 <?php 
-	foreach($expenses as $expense)
-		{
+	if(!$expenses)
+	{
+		echo'<tr><td colspan="3">No expenses set up at this time</td></tr>';
+	}
+	else
+	{
+		foreach($expenses as $expense)
+			{
 ?>
-			<tr>
-				<td><?php echo $expense->name ;?></td>
-				<td><?php echo FinanceData::formatMoney($expense->cost);?></td>
-				<td>
+				<tr>
+					<td><?php echo $expense->name ;?></td>
+					<td><?php echo FinanceData::formatMoney($expense->cost);?></td>
+					<td>
 				<?php
 					if($expense->type == "M")
 						{
@@ -34,7 +40,8 @@
 				</td>
 			</tr>
 <?php
-		}
+			}
+	}
 ?>
 </table>
 <h3>all airlines financial report</h3>
