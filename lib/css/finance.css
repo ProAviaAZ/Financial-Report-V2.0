@@ -1,0 +1,120 @@
+.act {
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+table.finance {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table.finance tr th,
+table.finance tr td {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+table.finance tr th:first-child,
+table.finance tr td:first-child {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  max-width: 150px;
+}
+table.finance tr th {
+  background: #ddd;
+  border-top: 1px solid #ddd;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+table.finance tr:first-child th:first-child {
+  border-top-left-radius: 5px;
+}
+
+table.finance tr:first-child th:last-child {
+  border-top-right-radius: 5px;
+}
+
+table.finance tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+table.finance tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+table.detail tr td,
+table.detail tr td:first-child{
+	border: none;
+	text-align: left;
+}
+
+div.scroll{ 
+	margin-bottom: 35px; 
+	padding: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height:250px;
+}
+
+ul.finance {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+	border: 1px solid #ddd;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+
+ul.finance li {
+	float: left;
+	padding: 5px;
+	width: 50%;
+	text-align: center;
+	}
+
+
+ul.finance li a {
+    display: inline-block;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+	text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 17px;
+	font-weight: 400;
+	border-radius: 5px;
+	width: 100%;
+}
+
+ul.finance li a:focus {
+	background-color: #ddd;\
+	border-radius: 5px;
+	}
+
+
+.finance2 {
+    display: none;
+    padding: 5px;
+    border: 1px solid #ddd;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; 
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
