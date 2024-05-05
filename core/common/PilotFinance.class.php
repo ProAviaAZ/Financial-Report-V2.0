@@ -97,6 +97,13 @@ class PilotFinance extends CodonData
 		return $row->total;
 	}
 	
+	public static function airlinepilotpay_sum($code)
+	{
+		$sql ="SELECT SUM(pilotpay*TIME_TO_SEC(flighttime_stamp)/3600) AS total FROM ".TABLE_PREFIX."pireps WHERE code = '$code'";
+		$row = DB::get_row($sql);
+		return $row->total;
+	}
+	
 	public static function airlineexpense_sum($code)
 	{
 		$sql ="SELECT SUM(expenses) AS total FROM ".TABLE_PREFIX."pireps WHERE code = '$code'";
@@ -120,7 +127,7 @@ class PilotFinance extends CodonData
 	
 	public static function airlineflighttime_sum($code)
 	{
-		$sql ="SELECT SUM(flighttime) AS total FROM ".TABLE_PREFIX."pireps WHERE code = '$code'";
+		$sql ="SELECT SUM(TIME_TO_SEC(flighttime_stamp)/3600) AS total FROM ".TABLE_PREFIX."pireps WHERE code = '$code'";
 		$row = DB::get_row($sql);		
 		return $row->total;
 	}
@@ -129,4 +136,3 @@ class PilotFinance extends CodonData
 	
 }
 ?>
-
