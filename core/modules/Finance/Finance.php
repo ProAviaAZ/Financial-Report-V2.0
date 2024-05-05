@@ -3,11 +3,14 @@ class Finance extends CodonModule
 {
 	public function index()	
     {
-		$revision = trim(file_get_contents(CORE_PATH.'/version'));
-			if($revision != 'simpilot 5.5.2')
+		// Set phpVMS version number below - works with "phpVMS 5.5.2.72 -- Simpilot/PHP 7.2" or "simpilot 5.5.2" - not tested in other versions
+	    	$revision = trim(file_get_contents(CORE_PATH.'/version'));
+			if($revision != '5.5.2.72 -- Simpilot/PHP 7.2')
+			// if($revision != 'simpilot 5.5.2')
 				{
 					echo '<center>phpVMS Version Installed Is Not Compatible With This Module!</center><br />';
-					echo '<center>phpVMS Version Installed: '.$revision.'</center>';
+					echo '<center>phpVMS Version Installed: '.$revision.'</center></br />';
+					echo '<center>See ... core/modules/Finance/Finance.php line 6 for info on how to change the phpVMS version</center>';
 				}
 			else
 			{
