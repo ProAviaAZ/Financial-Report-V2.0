@@ -2,7 +2,7 @@ A module for phpVMS to give pilots statistics about airlines
 --------------------------------------------------------------
 
 Updated to version 2.0.1
-1. Finance.data.class.php - Updated to provide correct pilot pay - added expenses and flight time
+1. /core/common/Finance.data.class.php - Updated to provide correct pilot pay - added expenses and flight time
 2. /core/Finance/Finance.php - Updated phpVMS version and provide feedback if a version change is needed
 3. /core/templates/finance/finance.php - Styling changes
 4. Updated this README.txt file to reflect above changes
